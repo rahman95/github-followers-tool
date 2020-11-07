@@ -29,7 +29,7 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "github-followers-tool",
+	Use:   "gh-flwrs",
 	Short: "Follower Management tool for github",
 	Long:  `A tool to allow you to manage your follower and following stats in github.`,
 	// Uncomment the following line if your bare application
@@ -73,9 +73,9 @@ func initConfig() {
 			os.Exit(1)
 		}
 
-		// Search config in home directory with name ".github-followers-tool" (without extension).
+		// Search config in home directory with name ".gh-flwrs" (without extension).
 		viper.AddConfigPath(home)
-		viper.SetConfigName(".github-followers-tool")
+		viper.SetConfigName(".gh-flwrs")
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
